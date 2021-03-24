@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DA182CD8260AC84A006B3372 /* FWTest.h in Headers */ = {isa = PBXBuildFile; fileRef = DA182CD6260AC84A006B3372 /* FWTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA182CE0260AC8DC006B3372 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA182CDF260AC8DC006B3372 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA182CD3260AC84A006B3372 /* FWTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FWTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA182CD6260AC84A006B3372 /* FWTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWTest.h; sourceTree = "<group>"; };
 		DA182CD7260AC84A006B3372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA182CDF260AC8DC006B3372 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				DA182CD6260AC84A006B3372 /* FWTest.h */,
 				DA182CD7260AC84A006B3372 /* Info.plist */,
+				DA182CDF260AC8DC006B3372 /* Test.swift */,
 			);
 			path = FWTest;
 			sourceTree = "<group>";
@@ -94,6 +97,7 @@
 				TargetAttributes = {
 					DA182CD2260AC84A006B3372 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -130,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA182CE0260AC8DC006B3372 /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +266,7 @@
 		DA182CDC260AC84A006B3372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H426ANJMT5;
@@ -277,6 +283,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.beaconbank.FWTest;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +292,7 @@
 		DA182CDD260AC84A006B3372 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = H426ANJMT5;
