@@ -18,7 +18,9 @@ create_sdk () {
 	SDK_DIR=$SDK_ROOT_DIR/${SDK_VERSION}/$SDK_NAME
 	mkdir -p $SDK_DIR
 
-	cp -rf "${CONFIGURATION_BUILD_DIR}/${CONF}-iphoneos/FWTest.framework" $SDK_DIR
+#	cp -rf "${CONFIGURATION_BUILD_DIR}/${CONF}-iphoneos/FWTest.framework" $SDK_DIR
+#	cp -rf "${CONFIGURATION_BUILD_DIR}/${CONF}-universal/FWTest.framework" $SDK_DIR
+	cp -rf "${CONFIGURATION_BUILD_DIR}/${CONF}-iphonesimulator/FWTest.framework" $SDK_DIR
 
   (cd $SDK_ROOT_DIR//${SDK_VERSION} && zip -r $SDK_NAME.zip $SDK_NAME)
 }

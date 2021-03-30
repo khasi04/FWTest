@@ -15,8 +15,14 @@ create_framework() {
 
 	xcodebuild -project FWTest.xcodeproj -sdk iphoneos -target "FWTest" -configuration "${CONF}" ONLY_ACTIVE_ARCH=NO clean build
 	
+#	xcodebuild -project FWTest.xcodeproj -sdk iphonesimulator -target "FWTest" -configuration "${CONF}" ONLY_ACTIVE_ARCH=NO "EXCLUDED_ARCHS=arm64 arm64e armv7 armv7s armv6 armv8" clean build
+	xcodebuild -project FWTest.xcodeproj -sdk iphonesimulator -target "FWTest" -configuration "${CONF}" ONLY_ACTIVE_ARCH=NO  clean build
 
 	cp -R "${CONFIGURATION_BUILD_DIR}/${CONF}-iphoneos/FWTest.framework" "${UNIVERSAL_DIR}/"
+	
+	cp -R "${CONFIGURATION_BUILD_DIR}/${CONF}-iphonesimulator/FWTest.framework/Modules/FWTest.swiftmodule/." "${UNIVERSAL_DIR}/FWTest.framework/Modules/FWTest.swiftmodule"
+
+#	lipo -create -output "${UNIVERSAL_DIR}/FWTest.framework/FWTest" "${CONFIGURATION_BUILD_DIR}/${CONF}-iphonesimulator/FWTest.framework/FWTest" "${CONFIGURATION_BUILD_DIR}/${CONF}-iphoneos/FWTest.framework/FWTest"
 
 }
 
